@@ -139,6 +139,7 @@ OBJS            ?= \
 	src/aftermath_fast_buildspeed_option.o \
 	src/sidebar_special_houses.o \
 	src/auto_harvest.o \
+	src/no_vortex_files.o \
 	\
 	watcall.o \
 	sym.o \
