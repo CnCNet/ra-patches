@@ -59,6 +59,13 @@ dd 0x0        ; ForwarderChain
 dd 0x1E6947   ; Name
 dd 0x1E6708   ; FirstThunk
 
+; mpgdll.dll
+;dd 0x1E63F8   ; OriginalFirstThunk
+;dd 0x0        ; TimeDateStamp
+;dd 0x0        ; ForwarderChain
+;dd 0x1E6954   ; Name
+;dd 0x1E67E8   ; FirstThunk
+
 ; DDRAW.dll
 dd 0x1E640C   ; OriginalFirstThunk
 dd 0x0        ; TimeDateStamp

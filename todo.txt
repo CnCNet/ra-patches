@@ -1,4 +1,3 @@
-remove mpgdll.dll dependency since no one got this file anymore (no one could play on cncnet cause the file is missing)
 
 SP stuff is missing
 Extended classses are missing
