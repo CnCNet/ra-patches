@@ -138,6 +138,7 @@ OBJS            ?= \
 	src/infantry_range_check.o \
 	src/aftermath_fast_buildspeed_option.o \
 	src/sidebar_special_houses.o \
+	src/auto_harvest.o \
 	\
 	watcall.o \
 	sym.o \

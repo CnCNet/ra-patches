@@ -154,6 +154,8 @@ global buildingcrewstuckfix
 global deadplayersradar
 global randomstartingsong
 cglobal extraremaptable
+global autoharvesting
+global str_AutoHarvesting
 
 sstring LimitCpuUsageKey, "LimitCpuUsage"
 sstring QuickSaveIniKey, "KeyQuickSave"
@@ -254,6 +256,7 @@ str_AllocConsole db"AllocConsole",0
 str_conout db"CONOUT$",0
 str_w db"w",0
 str_Debug db"Debug",0
+str_AutoHarvesting db"AutoHarvesting",0
 
 [section .data]
 sprintf_buffer3 TIMES 512 db 0
@@ -349,6 +352,7 @@ usedosinterfacemod db 0
 spawner_is_active  dd 0
 playerisgamehost db 1
 harvestergemmapfix dd 0
+autoharvesting dd 0
 
 [section .text]
 _Custom_Missions_Load_Game_Map_Specific_Tutorial_Text:

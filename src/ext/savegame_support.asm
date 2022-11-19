@@ -28,6 +28,7 @@ extern fixaisendingtankstopleft
 cextern InCoopMode
 extern fixnavalexploits
 extern _SessionClass__Session
+extern autoharvesting
 
 @LJMP   0x00537B32,      _Save_Game_Save_Game_Version
 @LJMP   0x00537FED,      _Load_Game_Patch_Version_Check
@@ -107,6 +108,7 @@ Clear_Extended_Savegame_Values:
 		mov		BYTE [fixaisendingtankstopleft], 0		
 		mov		DWORD [InCoopMode], 0
 		mov		DWORD [fixnavalexploits], 0
+		mov		BYTE [autoharvesting], 0
 	retn
 
 ; Loading and saving data in Save- and Load_Misc_Values_Extended_Savegames
@@ -139,6 +141,7 @@ _Save_Misc_Values_Extended_Savegames:
 	Save_Global_Value fixaisendingtankstopleft, 1
 	Save_Global_Value InCoopMode, 4
 	Save_Global_Value fixnavalexploits, 1
+	Save_Global_Value autoharvesting, 1
 
 .Ret:	
 	mov     eax, [0x00667808]; ds:Objects_Selected?
@@ -175,6 +178,7 @@ _Load_Misc_Values_Extended_Savegames:
 	Load_Global_Value fixaisendingtankstopleft, 1
 	Load_Global_Value InCoopMode, 4
 	Load_Global_Value fixnavalexploits, 1
+	Load_Global_Value autoharvesting, 1
 	
 .Ret:	
 	mov     ebx, 4

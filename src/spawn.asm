@@ -162,7 +162,8 @@ cextern recording_mode
 cextern recording_filename
 cextern ReduceSovietMaxAircrafts
 cextern PlayerIsSoviet
-
+extern str_AutoHarvesting
+extern autoharvesting
 
 
 ; Spawn code for CnCNet, reads SPAWN.INI for options
@@ -1186,6 +1187,9 @@ Initialize_Spawn:
     Load_INIClass EAX, FileClass_Map, INIClass_Map
     
     INI_Get_String_ INIClass_Map, str_basic, str_name, str_empty, 0x0067F2D6, 0x2A
+    
+    INI_Get_Bool str_settings, str_AutoHarvesting, 1
+    mov		[autoharvesting], al
     
     INI_Get_Bool str_settings, str_ReduceSovietMaxAircrafts, 1
     mov		[ReduceSovietMaxAircrafts], al
